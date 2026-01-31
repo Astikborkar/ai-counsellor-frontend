@@ -1,6 +1,9 @@
 'use client';
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useAuthStore } from "@/store/useAuthStore";
+import { MapPin, DollarSign, Plus, CheckCircle, ArrowRight } from "lucide-react";
 import RouteGuard from "../components/RouteGuard";
 
 export default function UniversitiesPage() {
@@ -32,7 +35,7 @@ export default function UniversitiesPage() {
           // Assuming existing shortlist uses names as unique identifiers or we match by name
           // The discovery list uses IDs '1', '2'. The backend shortlist stores 'universityName'.
           // Let's match by Name for this prototype.
-          const names = new Set(list.map((i: any) => i.universityName));
+          const names = new Set<string>(list.map((i: any) => i.universityName));
           setShortlistIDs(names);
         }
       } catch (error) {

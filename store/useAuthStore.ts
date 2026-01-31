@@ -6,7 +6,7 @@ type AuthState = {
   isLoggedIn: boolean;
   profileComplete: boolean;
 
-  login: (token: string) => void;
+  login: (token: string, profileCompleted?: boolean) => void;
   logout: () => void;
   completeProfile: () => void;
 };

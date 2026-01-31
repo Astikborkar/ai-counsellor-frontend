@@ -12,12 +12,6 @@ import {
   ArrowLeft,
   CheckCircle,
   Globe,
-  Calendar,
-  Award,
-  BookOpen,
-  Clock,
-  ChevronRight,
-  MapPin,
   User
 } from "lucide-react";
 

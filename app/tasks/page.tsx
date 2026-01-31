@@ -9,7 +9,6 @@ import {
   Circle,
   Target,
   Plus,
-  Filter,
   Calendar,
   Clock,
   Award,

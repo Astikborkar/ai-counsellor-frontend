@@ -16,14 +16,11 @@ import {
   ChevronRight,
   Bookmark,
   BookmarkCheck,
-  Building2,
-  GraduationCap,
   Target,
   Eye,
   Share2,
   Download,
   Calendar,
-  Clock,
   Lock,
   Unlock
 } from "lucide-react";
@@ -43,6 +40,7 @@ type University = {
   deadline: string;
   requirements: string[];
   isLocked?: boolean;
+  saved?: boolean;
 };
 
 export default function UniversitiesPage() {

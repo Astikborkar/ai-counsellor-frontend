@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/useAuthStore";
 import RouteGuard from "../components/RouteGuard";
-import { Lock, CheckCircle, AlertTriangle, ArrowRight } from "lucide-react";
+import { Lock, CheckCircle } from "lucide-react";
 
 export default function LockPage() {
   const { token } = useAuthStore();

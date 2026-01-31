@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -97,13 +97,16 @@ export default function LoginPage() {
     }
   };
 
-  useState(() => {
-    const rememberedEmail = localStorage.getItem('rememberedEmail');
-    if (rememberedEmail) {
-      setFormData(prev => ({ ...prev, email: rememberedEmail }));
-      setRememberMe(true);
+  useEffect(() => {
+    // Check if running in browser
+    if (typeof window !== 'undefined') {
+      const rememberedEmail = localStorage.getItem('rememberedEmail');
+      if (rememberedEmail) {
+        setFormData(prev => ({ ...prev, email: rememberedEmail }));
+        setRememberMe(true);
+      }
     }
-  });
+  }, []);
 
   return (
     <main className="h-screen overflow-hidden flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-purple-50 px-4 sm:px-6">
